@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(more:*)",
+      "Bash(zip:*)",
+      "Bash(powershell -Command:*)",
+      "Skill(skill-creator)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(set PYTHONIOENCODING=utf-8:*)"
+    ]
+  }
+}
