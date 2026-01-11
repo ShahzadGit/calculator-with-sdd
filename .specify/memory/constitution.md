@@ -1,55 +1,66 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+## Sync Impact Report
+- Version change: 0.0.0 → 1.0.0
+- Added sections: All (new constitution)
+- Principles defined:
+  - I. Specification-First Development
+  - II. Quality & Validation Standards
+  - III. Documentation & Traceability
+  - IV. Development Principles
+  - V. Tech Stack & Tooling
+- Templates requiring updates:
+  - .specify/templates/plan-template.md ✅ (Constitution Check section compatible)
+  - .specify/templates/spec-template.md ✅ (Requirements/Success Criteria aligned)
+  - .specify/templates/tasks-template.md ✅ (Test-first workflow aligned)
+- Follow-up TODOs: None
+-->
+
+# Calculator Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Specification-First Development
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+All meaningful requirements MUST be captured in specification artifacts before implementation.
+Specifications MUST describe user intent, acceptance criteria, edge cases, and expected behavior in clear, testable terms.
+Specs are the single source of truth during planning and implementation phases.
+Specs MUST be reviewed and approved prior to `/sp.plan`.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Quality & Validation Standards
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+Tests are written before or alongside implementation (TDD).
+Every feature spec MUST include acceptance tests that can be automated.
+All tests MUST pass before merging or releasing.
+Maintain at least 80% code coverage across the codebase.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. Documentation & Traceability
 
-### [PRINCIPLE_6_NAME]
+All architectural decisions MUST be captured via ADRs (with rationale and alternatives).
+Specs, plans, and ADRs are stored in version control and linked to tasks.
+Changes to specs MUST be documented with updated ADRs to prevent regression and drift.
 
+### IV. Development Principles
 
-[PRINCIPLE__DESCRIPTION]
+Prioritize clarity, modularity, and maintainability.
+Use TypeScript for type safety, with strict linting and formatting rules.
+Code should express intent clearly and be easily testable.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### V. Tech Stack & Tooling
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Official stack: Node.js, npm, Next.js@15.3.6, React, TypeScript.
+UI libraries: TailwindCSS, React Hook Form.
+Runtime validation via Zod for runtime correctness.
+CI MUST enforce tests, linting, and spec validation checks.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+The constitution supersedes all other development practices.
+Amendments require:
+1. Documentation of the proposed change
+2. Team approval
+3. Migration plan (if backward incompatible)
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All PRs and code reviews MUST verify compliance with these principles.
+Complexity beyond what is strictly necessary MUST be justified with documentation.
+
+**Version**: 1.0.0 | **Ratified**: 2026-01-09 | **Last Amended**: 2026-01-09
