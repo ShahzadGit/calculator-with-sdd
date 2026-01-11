@@ -1,8 +1,51 @@
 # Arithmetic Calculator
 
-A web-based arithmetic calculator supporting six operations: addition, subtraction, multiplication, division, exponentiation, and modulus.
+This poject is mainly focused on Arithmentic Calculator **_BUT_** it was followed to Test the Skills that were made for Panaversity's Assignment.
 
-## Features
+## 📖 About SKILLs Collection
+
+These skills were created and refined through hands-on Next.js development with Claude on the web. Each skill emerged from real project needs, capturing best practices, common patterns, and solutions to recurring challenges. They represent distilled wisdom from building actual applications—not theoretical exercises.
+
+**The Philosophy:** Every skill is battle-tested, production-ready, and designed to eliminate repetitive work while ensuring quality, security, and accessibility are never compromised.
+
+## 🎯 Skills Overview
+
+### 1. **nextjs-component-generator** ⭐⭐⭐⭐⭐
+
+**Generate production-ready UI components with framework-perfect patterns**
+
+**Description:**
+Creates Next.js components that work immediately in real projects with zero framework errors. Handles App Router compatibility, proper use of `next/link` and `next/image`, client/server component boundaries, TypeScript types, and Tailwind styling.
+
+### 2. **nextjs-api-generator** ⭐⭐⭐⭐⭐
+
+**Build secure, type-safe API routes and server actions with production patterns**
+
+**Description:**
+Generates complete API endpoints and server actions with validation, error handling, authentication, rate limiting, logging, and security best practices. Handles everything from simple CRUD to complex webhooks and file uploads.
+
+### 3. **nextjs-form-builder** ⭐⭐⭐⭐⭐
+
+**Create accessible, validated forms with excellent UX**
+
+**Description:**
+Generates complete form solutions with Zod validation, React Hook Form integration, server actions, accessibility (WCAG 2.1 AA), loading states, and progressive enhancement. Covers simple forms to complex multi-step wizards.
+
+### 4. **nextjs-layout-builder** ⭐⭐⭐⭐⭐
+
+**Rapid page structure creation with SEO and responsive design**
+
+**Description:**
+Generates production-ready layouts and page structures including app shells, dashboards, landing pages, authentication layouts, and blog layouts. All layouts include proper metadata, responsive design, and semantic HTML.
+
+### 5. **code-review-and-improve** ⭐⭐⭐⭐⭐
+
+**Systematic quality assurance for Next.js code**
+
+**Description:**
+Reviews and improves Next.js code with focus on readability, correctness, framework best practices, accessibility, and catching silent problems. Makes minimal changes while preserving existing behavior.
+
+## Features of the Project and Skill Usage
 
 - **Six Arithmetic Operations**: +, −, ×, ÷, ^, %
 - **Dual Input Methods**: On-screen buttons and keyboard input
