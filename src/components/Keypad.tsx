@@ -2,6 +2,9 @@
  * Keypad Component
  *
  * Number input buttons (0-9), decimal point, and negative sign.
+ * Enhanced with calculator.number colors, touch targets, and neumorphic styling.
+ *
+ * @see specs/002-ui-enhancements/spec.md - US1 Visual Hierarchy
  */
 
 'use client';
@@ -9,7 +12,23 @@
 import type { KeypadProps } from '@/lib/types';
 
 const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0'];
-const buttonClasses = "bg-gray-700 hover:bg-gray-600 active:bg-gray-500 text-white text-2xl font-semibold py-4 rounded-lg transition-colors";
+
+// T029, T110: Number button styling with calculator.number colors, touch-target utility, and responsive text sizing
+const buttonClasses = `
+  bg-calculator-number
+  hover:brightness-125
+  active:brightness-90
+  text-calculator-text
+  text-xl sm:text-2xl lg:text-3xl
+  font-semibold
+  min-h-touch min-w-touch
+  py-4
+  rounded-lg
+  neomorphic-raised
+  animate-on-hover
+  focus-ring
+  transition-all
+`.replace(/\s+/g, ' ').trim();
 
 export default function Keypad({
   onNumberClick,

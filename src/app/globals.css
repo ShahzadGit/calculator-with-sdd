@@ -18,3 +18,100 @@ body {
     text-wrap: balance;
   }
 }
+
+/* ==========================================================================
+   GLASSMORPHISM UTILITIES
+   ========================================================================== */
+
+@layer components {
+  /* T014: Glassmorphism container with frosted glass effect */
+  .glass-container {
+    background: hsla(220, 20%, 15%, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 1.5rem;
+  }
+
+  /* T015: Fallback for browsers without backdrop-filter support */
+  @supports not (backdrop-filter: blur(12px)) {
+    .glass-container {
+      background: hsl(220, 20%, 12%);
+      border: 1px solid hsla(0, 0%, 100%, 0.15);
+    }
+  }
+}
+
+/* ==========================================================================
+   NEUMORPHISM UTILITIES
+   ========================================================================== */
+
+@layer components {
+  /* T016: Neumorphism raised effect for buttons */
+  .neomorphic-raised {
+    box-shadow:
+      6px 6px 12px rgba(0, 0, 0, 0.25),
+      -4px -4px 10px rgba(255, 255, 255, 0.05);
+  }
+
+  /* T017: Neumorphism pressed effect for active buttons */
+  .neomorphic-pressed {
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+      inset -3px -3px 6px rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* ==========================================================================
+   ANIMATION UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+  /* T018: Smooth hover transition for interactive elements */
+  .animate-on-hover {
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+
+  .animate-on-hover:hover {
+    transform: scale(1.03);
+  }
+
+  .animate-on-hover:active {
+    transform: scale(0.97);
+  }
+
+  /* T077-T078: Combine neomorphic-pressed with animate-on-hover for pressed state */
+  .neomorphic-raised.animate-on-hover:active {
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+      inset -3px -3px 6px rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* T019: Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   FOCUS UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+  /* T020: Focus-visible ring utilities for keyboard navigation */
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px hsl(145, 65%, 55%);
+  }
+}

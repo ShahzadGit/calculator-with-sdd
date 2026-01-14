@@ -196,6 +196,12 @@ export interface DisplayProps {
 
   /** Currently selected operation (shown as indicator) */
   operation: Operation | null;
+
+  /** Show pulse animation on result calculation (US3) */
+  showPulse?: boolean;
+
+  /** Show shake animation on error (US3) */
+  showShake?: boolean;
 }
 
 /**

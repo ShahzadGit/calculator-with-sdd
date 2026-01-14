@@ -100,19 +100,21 @@ export default function Calculator() {
 
   return (
     <div
-      className="w-full max-w-md mx-auto bg-gray-800 p-6 rounded-2xl shadow-2xl"
+      className="w-full max-w-md mx-auto glass-container p-4 sm:p-6 lg:p-8 shadow-2xl"
       role="region"
       aria-label="Arithmetic calculator"
     >
-      {/* Display */}
+      {/* Display - T093-T096: Pass animation props for result pulse and error shake */}
       <Display
         value={state.displayValue}
         error={state.error}
         operation={state.operation}
+        showPulse={state.result !== null}
+        showShake={state.error !== null}
       />
 
       {/* Main calculator layout */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
         {/* Left side: Keypad (3 columns) */}
         <div className="col-span-3">
           <Keypad
@@ -123,18 +125,20 @@ export default function Calculator() {
 
           {/* Clear and Equals buttons below keypad */}
           <div className="grid grid-cols-2 gap-2 mt-2">
+            {/* T031, T110: Clear button with calculator.clear color and responsive text sizing */}
             <button
               onClick={handleClear}
               aria-label="Clear calculator"
-              className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white text-xl font-semibold py-4 rounded-lg transition-colors"
+              className="bg-calculator-clear hover:brightness-110 active:brightness-90 text-white text-lg sm:text-xl lg:text-2xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
             >
               C
             </button>
 
+            {/* T032, T110: Equals button with calculator.equals color and responsive text sizing */}
             <button
               onClick={handleCalculate}
               aria-label="Calculate result"
-              className="bg-green-600 hover:bg-green-500 active:bg-green-700 text-white text-xl font-semibold py-4 rounded-lg transition-colors"
+              className="bg-calculator-equals hover:brightness-110 active:brightness-90 text-white text-lg sm:text-xl lg:text-2xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
             >
               =
             </button>
