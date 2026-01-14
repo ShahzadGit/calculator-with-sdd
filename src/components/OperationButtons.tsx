@@ -2,6 +2,9 @@
  * OperationButtons Component
  *
  * Arithmetic operation buttons (+, −, ×, ÷).
+ * Enhanced with calculator.operation colors and distinct visual treatment.
+ *
+ * @see specs/002-ui-enhancements/spec.md - US1 Visual Hierarchy
  */
 
 'use client';
@@ -30,11 +33,22 @@ export default function OperationButtons({
           onClick={() => onOperationClick(op)}
           aria-label={ariaLabel}
           aria-pressed={selectedOperation === op}
-          className={`text-2xl font-semibold py-4 rounded-lg transition-colors ${
-            selectedOperation === op
-              ? 'bg-orange-600 hover:bg-orange-500 active:bg-orange-700'
-              : 'bg-orange-500 hover:bg-orange-400 active:bg-orange-600'
-          } text-white`}
+          className={`
+            text-xl sm:text-2xl lg:text-3xl
+            font-semibold
+            min-h-touch
+            py-4
+            rounded-lg
+            neomorphic-raised
+            animate-on-hover
+            focus-ring
+            transition-all
+            ${selectedOperation === op
+              ? 'bg-calculator-operation brightness-125 ring-2 ring-white/30'
+              : 'bg-calculator-operation hover:brightness-110 active:brightness-90'
+            }
+            text-white
+          `.replace(/\s+/g, ' ').trim()}
         >
           {label}
         </button>

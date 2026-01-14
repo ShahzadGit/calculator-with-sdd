@@ -554,4 +554,180 @@ describe('Calculator Integration Tests', () => {
       expect(display.textContent).toBe('0');
     });
   });
+
+  // ============================================================================
+  // Phase 9: UI Integration Tests (T122-T125)
+  // ============================================================================
+
+  // T122: Verify integration tests work with new UI styling
+  describe('T122: UI Styling Integration', () => {
+    it('should render Calculator with glass-container styling', () => {
+      render(<Calculator />);
+
+      const calculator = screen.getByRole('region', { name: /calculator/i });
+      expect(calculator.className).toMatch(/glass-container/);
+      expect(calculator.className).toMatch(/shadow-2xl/);
+    });
+
+    it('should render all buttons with neomorphic styling', () => {
+      render(<Calculator />);
+
+      const buttons = screen.getAllByRole('button');
+      buttons.forEach(button => {
+        expect(button.className).toMatch(/neomorphic-raised/);
+      });
+    });
+
+    it('should render buttons with animation classes', () => {
+      render(<Calculator />);
+
+      const buttons = screen.getAllByRole('button');
+      buttons.forEach(button => {
+        expect(button.className).toMatch(/animate-on-hover/);
+        expect(button.className).toMatch(/transition-all/);
+      });
+    });
+  });
+
+  // T123: Complete calculation flow with new UI (pulse animation)
+  describe('T123: Calculation Flow with Pulse Animation', () => {
+    it('should show pulse animation class when result is calculated', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      // Perform calculation: 5 + 3 = 8
+      await user.click(screen.getByRole('button', { name: 'Number 5' }));
+      await user.click(screen.getByRole('button', { name: 'Add' }));
+      await user.click(screen.getByRole('button', { name: 'Number 3' }));
+      await user.click(screen.getByRole('button', { name: 'Calculate result' }));
+
+      // Verify result displayed
+      const display = screen.getByRole('status', { name: /display/i });
+      expect(display.textContent).toBe('8');
+
+      // Verify pulse animation class is applied when result is shown
+      expect(display.className).toMatch(/animate-pulse-result/);
+    });
+
+    it('should complete full calculation workflow with all UI effects', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      const display = screen.getByRole('status', { name: /display/i });
+      const calculator = screen.getByRole('region', { name: /calculator/i });
+
+      // Verify initial state
+      expect(display.textContent).toBe('0');
+      expect(calculator.className).toMatch(/glass-container/);
+
+      // Enter first number with UI effects
+      const button7 = screen.getByRole('button', { name: 'Number 7' });
+      expect(button7.className).toMatch(/neomorphic-raised/);
+      await user.click(button7);
+      expect(display.textContent).toBe('7');
+
+      // Select operation
+      const multiplyButton = screen.getByRole('button', { name: 'Multiply' });
+      expect(multiplyButton.className).toMatch(/neomorphic-raised/);
+      await user.click(multiplyButton);
+
+      // Enter second number
+      await user.click(screen.getByRole('button', { name: 'Number 6' }));
+      expect(display.textContent).toBe('6');
+
+      // Calculate with UI feedback
+      const equalsButton = screen.getByRole('button', { name: 'Calculate result' });
+      expect(equalsButton.className).toMatch(/neomorphic-raised/);
+      await user.click(equalsButton);
+
+      // Verify result with pulse animation
+      expect(display.textContent).toBe('42');
+      expect(display.className).toMatch(/animate-pulse-result/);
+    });
+  });
+
+  // T124: Error handling flow with shake animation
+  describe('T124: Error Handling Flow with Shake Animation', () => {
+    it('should show shake animation class when error occurs', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      // Cause division by zero: 5 ÷ 0
+      await user.click(screen.getByRole('button', { name: 'Number 5' }));
+      await user.click(screen.getByRole('button', { name: 'Divide' }));
+      await user.click(screen.getByRole('button', { name: 'Number 0' }));
+      await user.click(screen.getByRole('button', { name: 'Calculate result' }));
+
+      // Verify error displayed with shake animation
+      const display = screen.getByRole('status', { name: /error/i });
+      expect(display.textContent).toBe('Cannot divide by zero');
+      expect(display.className).toMatch(/animate-shake-error/);
+      expect(display.className).toMatch(/text-calculator-clear/);
+    });
+
+    it('should clear error and remove shake animation', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      // Cause error
+      await user.click(screen.getByRole('button', { name: 'Number 8' }));
+      await user.click(screen.getByRole('button', { name: 'Modulus' }));
+      await user.click(screen.getByRole('button', { name: 'Number 0' }));
+      await user.click(screen.getByRole('button', { name: 'Calculate result' }));
+
+      // Verify error state
+      let display = screen.getByRole('status', { name: /error/i });
+      expect(display.className).toMatch(/animate-shake-error/);
+
+      // Clear calculator
+      await user.click(screen.getByRole('button', { name: 'Clear calculator' }));
+
+      // Verify error cleared and no shake animation
+      display = screen.getByRole('status', { name: /display/i });
+      expect(display.textContent).toBe('0');
+      expect(display.className).not.toMatch(/animate-shake-error/);
+    });
+
+    it('should recover from error with new calculation', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      // Cause error
+      await user.click(screen.getByRole('button', { name: 'Number 1' }));
+      await user.click(screen.getByRole('button', { name: 'Divide' }));
+      await user.click(screen.getByRole('button', { name: 'Number 0' }));
+      await user.click(screen.getByRole('button', { name: 'Calculate result' }));
+
+      // Start new calculation (should clear error)
+      await user.click(screen.getByRole('button', { name: 'Number 9' }));
+
+      const display = screen.getByRole('status', { name: /display/i });
+      expect(display.textContent).toBe('9');
+      expect(display.className).not.toMatch(/animate-shake-error/);
+      expect(display.className).toMatch(/text-calculator-text/);
+    });
+  });
+
+  // T125: Keyboard navigation flow (already in keyboard-navigation.test.tsx)
+  describe('T125: Keyboard Navigation with UI', () => {
+    it('should have focus-ring class on all interactive buttons', () => {
+      render(<Calculator />);
+
+      const buttons = screen.getAllByRole('button');
+      buttons.forEach(button => {
+        expect(button.className).toMatch(/focus-ring/);
+      });
+    });
+
+    it('should maintain UI styling during keyboard interaction', async () => {
+      const user = userEvent.setup();
+      render(<Calculator />);
+
+      // Tab to first button and verify styling preserved
+      await user.tab();
+      const focusedButton = document.activeElement as HTMLElement;
+      expect(focusedButton.className).toMatch(/neomorphic-raised/);
+      expect(focusedButton.className).toMatch(/focus-ring/);
+    });
+  });
 });

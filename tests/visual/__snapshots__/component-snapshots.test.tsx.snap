@@ -1,0 +1,593 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Visual Regression Tests - Component Snapshots Calculator Component should match snapshot with default state 1`] = `
+<div
+  aria-label="Arithmetic calculator"
+  class="w-full max-w-md mx-auto glass-container p-4 sm:p-6 lg:p-8 shadow-2xl"
+  role="region"
+>
+  <div
+    class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+  >
+    <output
+      aria-label="Calculator display value"
+      aria-live="polite"
+      class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+      role="status"
+    >
+      0
+    </output>
+  </div>
+  <div
+    class="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-4"
+  >
+    <div
+      class="col-span-3"
+    >
+      <div
+        class="grid grid-cols-3 gap-2"
+      >
+        <button
+          aria-label="Number 7"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          7
+        </button>
+        <button
+          aria-label="Number 8"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          8
+        </button>
+        <button
+          aria-label="Number 9"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          9
+        </button>
+        <button
+          aria-label="Number 4"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          4
+        </button>
+        <button
+          aria-label="Number 5"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          5
+        </button>
+        <button
+          aria-label="Number 6"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          6
+        </button>
+        <button
+          aria-label="Number 1"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          1
+        </button>
+        <button
+          aria-label="Number 2"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          2
+        </button>
+        <button
+          aria-label="Number 3"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          3
+        </button>
+        <button
+          aria-label="Toggle negative"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          +/-
+        </button>
+        <button
+          aria-label="Number 0"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          0
+        </button>
+        <button
+          aria-label="Decimal point"
+          class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          .
+        </button>
+      </div>
+      <div
+        class="grid grid-cols-2 gap-2 mt-2"
+      >
+        <button
+          aria-label="Clear calculator"
+          class="bg-calculator-clear hover:brightness-110 active:brightness-90 text-white text-lg sm:text-xl lg:text-2xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          C
+        </button>
+        <button
+          aria-label="Calculate result"
+          class="bg-calculator-equals hover:brightness-110 active:brightness-90 text-white text-lg sm:text-xl lg:text-2xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <div
+      class="col-span-1"
+    >
+      <div
+        class="grid grid-cols-1 gap-2"
+      >
+        <button
+          aria-label="Divide"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          ÷
+        </button>
+        <button
+          aria-label="Multiply"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          ×
+        </button>
+        <button
+          aria-label="Subtract"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          −
+        </button>
+        <button
+          aria-label="Add"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          +
+        </button>
+        <button
+          aria-label="Exponentiate"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          ^
+        </button>
+        <button
+          aria-label="Modulus"
+          aria-pressed="false"
+          class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+        >
+          %
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with decimal value 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <output
+    aria-label="Calculator display value"
+    aria-live="polite"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+    role="status"
+  >
+    3.14159
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with error state 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <output
+    aria-label="Calculator error message"
+    aria-live="assertive"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-clear"
+    role="status"
+  >
+    Cannot divide by zero
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with large number 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <output
+    aria-label="Calculator display value"
+    aria-live="polite"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+    role="status"
+  >
+    9999999999
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with negative value 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <output
+    aria-label="Calculator display value"
+    aria-live="polite"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+    role="status"
+  >
+    -42
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with operation indicator 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <div
+    aria-label="Selected operation: +"
+    aria-live="polite"
+    class="absolute top-2 right-4 text-sm text-calculator-textMuted font-medium"
+  >
+    +
+  </div>
+  <output
+    aria-label="Calculator display value"
+    aria-live="polite"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+    role="status"
+  >
+    100
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Display Component should match snapshot with value only 1`] = `
+<div
+  class="relative w-full bg-calculator-display rounded-xl p-4 sm:p-5 mb-4 shadow-inner border border-white/5"
+>
+  <output
+    aria-label="Calculator display value"
+    aria-live="polite"
+    class="block w-full bg-transparent text-right text-3xl sm:text-4xl lg:text-5xl font-mono outline-none truncate text-calculator-text"
+    role="status"
+  >
+    12345
+  </output>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots Keypad Component should match snapshot 1`] = `
+<div
+  class="grid grid-cols-3 gap-2"
+>
+  <button
+    aria-label="Number 7"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    7
+  </button>
+  <button
+    aria-label="Number 8"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    8
+  </button>
+  <button
+    aria-label="Number 9"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    9
+  </button>
+  <button
+    aria-label="Number 4"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    4
+  </button>
+  <button
+    aria-label="Number 5"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    5
+  </button>
+  <button
+    aria-label="Number 6"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    6
+  </button>
+  <button
+    aria-label="Number 1"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    1
+  </button>
+  <button
+    aria-label="Number 2"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    2
+  </button>
+  <button
+    aria-label="Number 3"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    3
+  </button>
+  <button
+    aria-label="Toggle negative"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    +/-
+  </button>
+  <button
+    aria-label="Number 0"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    0
+  </button>
+  <button
+    aria-label="Decimal point"
+    class="bg-calculator-number hover:brightness-125 active:brightness-90 text-calculator-text text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch min-w-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all"
+  >
+    .
+  </button>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots OperationButtons Component should match snapshot with add selected 1`] = `
+<div
+  class="grid grid-cols-1 gap-2"
+>
+  <button
+    aria-label="Divide"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ÷
+  </button>
+  <button
+    aria-label="Multiply"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ×
+  </button>
+  <button
+    aria-label="Subtract"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    −
+  </button>
+  <button
+    aria-label="Add"
+    aria-pressed="true"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation brightness-125 ring-2 ring-white/30 text-white"
+  >
+    +
+  </button>
+  <button
+    aria-label="Exponentiate"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ^
+  </button>
+  <button
+    aria-label="Modulus"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    %
+  </button>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots OperationButtons Component should match snapshot with divide selected 1`] = `
+<div
+  class="grid grid-cols-1 gap-2"
+>
+  <button
+    aria-label="Divide"
+    aria-pressed="true"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation brightness-125 ring-2 ring-white/30 text-white"
+  >
+    ÷
+  </button>
+  <button
+    aria-label="Multiply"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ×
+  </button>
+  <button
+    aria-label="Subtract"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    −
+  </button>
+  <button
+    aria-label="Add"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    +
+  </button>
+  <button
+    aria-label="Exponentiate"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ^
+  </button>
+  <button
+    aria-label="Modulus"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    %
+  </button>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots OperationButtons Component should match snapshot with multiply selected 1`] = `
+<div
+  class="grid grid-cols-1 gap-2"
+>
+  <button
+    aria-label="Divide"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ÷
+  </button>
+  <button
+    aria-label="Multiply"
+    aria-pressed="true"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation brightness-125 ring-2 ring-white/30 text-white"
+  >
+    ×
+  </button>
+  <button
+    aria-label="Subtract"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    −
+  </button>
+  <button
+    aria-label="Add"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    +
+  </button>
+  <button
+    aria-label="Exponentiate"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ^
+  </button>
+  <button
+    aria-label="Modulus"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    %
+  </button>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots OperationButtons Component should match snapshot with no selection 1`] = `
+<div
+  class="grid grid-cols-1 gap-2"
+>
+  <button
+    aria-label="Divide"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ÷
+  </button>
+  <button
+    aria-label="Multiply"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ×
+  </button>
+  <button
+    aria-label="Subtract"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    −
+  </button>
+  <button
+    aria-label="Add"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    +
+  </button>
+  <button
+    aria-label="Exponentiate"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ^
+  </button>
+  <button
+    aria-label="Modulus"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    %
+  </button>
+</div>
+`;
+
+exports[`Visual Regression Tests - Component Snapshots OperationButtons Component should match snapshot with subtract selected 1`] = `
+<div
+  class="grid grid-cols-1 gap-2"
+>
+  <button
+    aria-label="Divide"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ÷
+  </button>
+  <button
+    aria-label="Multiply"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ×
+  </button>
+  <button
+    aria-label="Subtract"
+    aria-pressed="true"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation brightness-125 ring-2 ring-white/30 text-white"
+  >
+    −
+  </button>
+  <button
+    aria-label="Add"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    +
+  </button>
+  <button
+    aria-label="Exponentiate"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    ^
+  </button>
+  <button
+    aria-label="Modulus"
+    aria-pressed="false"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold min-h-touch py-4 rounded-lg neomorphic-raised animate-on-hover focus-ring transition-all bg-calculator-operation hover:brightness-110 active:brightness-90 text-white"
+  >
+    %
+  </button>
+</div>
+`;
