@@ -2,7 +2,7 @@
 
 This poject is mainly focused on Arithmentic Calculator **_BUT_** it was followed to Test the Skills that were made for Panaversity's Assignment.
 Live Link:
-https://calculator-with-sdd-01.vercel.app/
+https://calculator-with-sdd.vercel.app/
 
 ## 📖 About SKILLs Collection
 
@@ -175,8 +175,9 @@ The following Next.js skills were used to enhance the calculator UI with modern 
 **Skills Applied:**
 
 1. **nextjs-component-generator**: Enhanced all calculator components with:
+
    - TailwindCSS utility classes for responsive design
-   - Custom color palette (calculator.* colors in tailwind.config.ts)
+   - Custom color palette (calculator.\* colors in tailwind.config.ts)
    - Glassmorphism container styling (.glass-container)
    - Neumorphism button effects (.neomorphic-raised, .neomorphic-pressed)
    - Touch target compliance (min-h-touch, min-w-touch at 44px)
@@ -189,15 +190,15 @@ The following Next.js skills were used to enhance the calculator UI with modern 
 
 **UI Enhancement Files Modified:**
 
-| Component | Enhancement |
-|-----------|-------------|
-| `tailwind.config.ts` | Custom color palette, animations, touch targets |
-| `src/app/globals.css` | Glassmorphism, neumorphism, animation utilities |
-| `src/app/page.tsx` | Gradient background with calculator colors |
-| `src/components/Calculator.tsx` | Glass container, responsive spacing |
-| `src/components/Display.tsx` | Display background, responsive text |
-| `src/components/Keypad.tsx` | Number button styling, neumorphic effects |
-| `src/components/OperationButtons.tsx` | Operation colors, selected state |
+| Component                             | Enhancement                                     |
+| ------------------------------------- | ----------------------------------------------- |
+| `tailwind.config.ts`                  | Custom color palette, animations, touch targets |
+| `src/app/globals.css`                 | Glassmorphism, neumorphism, animation utilities |
+| `src/app/page.tsx`                    | Gradient background with calculator colors      |
+| `src/components/Calculator.tsx`       | Glass container, responsive spacing             |
+| `src/components/Display.tsx`          | Display background, responsive text             |
+| `src/components/Keypad.tsx`           | Number button styling, neumorphic effects       |
+| `src/components/OperationButtons.tsx` | Operation colors, selected state                |
 
 **New Test Files:**
 

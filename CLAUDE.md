@@ -113,7 +113,40 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 1.  **Ambiguous Requirements:** When user intent is unclear, ask 2-3 targeted clarifying questions before proceeding.
 2.  **Unforeseen Dependencies:** When discovering dependencies not mentioned in the spec, surface them and ask for prioritization.
 3.  **Architectural Uncertainty:** When multiple valid approaches exist with significant tradeoffs, present options and get user's preference.
-4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps. 
+4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps.
+
+### 6. Skills Utilization (Proactive Tool Usage)
+You MUST proactively use available skills when tasks match their specialized capabilities. Skills provide domain expertise and optimized workflows.
+
+**Next.js Development Skills** (use for React/Next.js/Tailwind work):
+- `/code-review-and-improve` - Use when reviewing, improving, or optimizing React/Next.js/Tailwind code. Trigger: user asks to review, improve, optimize, or fix code quality issues.
+- `/nextjs-component-generator` - Use when creating or refactoring Next.js components, sections, pages, or layouts. Trigger: user asks to create/generate/build a component or UI element.
+- `/nextjs-api-generator` - Use when creating or refactoring API routes, server actions, or backend logic. Trigger: user asks to create endpoints, form handlers, webhooks, or data mutations.
+- `/nextjs-form-builder` - Use when creating forms with validation. Trigger: user asks to create login, registration, contact, or any data input form.
+- `/nextjs-layout-builder` - Use when creating page structures, app shells, dashboards, or landing pages. Trigger: user asks to create new pages or restructure layouts.
+
+**SpecifyPlus Workflow Skills** (use for spec-driven development):
+- `/sp.specify` - Create or update feature specifications from natural language descriptions.
+- `/sp.clarify` - Identify underspecified areas and gather requirements through targeted questions.
+- `/sp.plan` - Execute implementation planning using the plan template.
+- `/sp.tasks` - Generate dependency-ordered tasks.md from design artifacts.
+- `/sp.implement` - Execute implementation plan by processing tasks.md.
+- `/sp.git.commit_pr` - Intelligently execute git workflows (commit + PR creation).
+- `/sp.phr` - Record AI exchanges as Prompt History Records (auto-invoked after user prompts).
+- `/sp.adr` - Create Architecture Decision Records for significant decisions.
+- `/sp.analyze` - Perform cross-artifact consistency analysis (spec, plan, tasks).
+
+**Invocation Rules:**
+1. **Automatic Detection**: When user request matches a skill's domain, IMMEDIATELY invoke that skill as first action.
+2. **Don't Announce**: Execute the skill directly; don't just mention it without invoking.
+3. **Prefer Skills**: Always prefer specialized skills over manual implementation for matching tasks.
+4. **Skill Chaining**: Use multiple skills in sequence when appropriate (e.g., `/sp.clarify` → `/sp.specify` → `/sp.plan`).
+
+**Examples:**
+- User: "Review my Calculator component" → Immediately invoke `/code-review-and-improve`
+- User: "Create a login form" → Immediately invoke `/nextjs-form-builder`
+- User: "Add dark mode feature" → Invoke `/sp.specify` to create feature spec first
+- User: "Generate tasks for the new feature" → Invoke `/sp.tasks`
 
 ## Default policies (must follow)
 - Clarify and plan first - keep business understanding separate from technical plan and carefully architect and implement.
